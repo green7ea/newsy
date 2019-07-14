@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset='UTF-8'>
+    <title> Newsy </title>
+    <link rel='stylesheet' href='public/newsy.css'>
+
+    <script async>
+      function remove(id) {
+          var xhttp = new XMLHttpRequest();
+          xhttp.open("POST", 'delete/' + id, true);
+          xhttp.send();
+
+          var entry = document.getElementById("entry-" + id).style.display = 'none';
+      }
+    </script>
+  </head>
+
+  <body>
+    <section>
+
+      {% for feed in feeds %}
+      <feed>
+        <h1> {{ feed.title }} </h1>
+        <list>
+          {% for entry in feed.entries %}
+          <entry id='entry-{{ entry.id }}'>
+            <link> <a href='{{ entry.link }}'> {{ entry.title }} </a> </link>
+            <options>
+              <a class='close' onclick='remove({{ entry.id }})'>  X  </a>
+              <comments>
+                <a href='{{ entry.comments }}'> comments </a>
+              </comments>
+            </options>
+          </entry>
+          {% endfor %}
+        </list>
+
+      </feed>
+      {% endfor %}
+
+    </section>
+  </body>
+</html>

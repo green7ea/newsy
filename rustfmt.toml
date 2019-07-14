@@ -1,0 +1,4 @@
+max_width = 80
+indent_style = "Block"
+brace_style = "AlwaysNextLine"
+control_brace_style = "AlwaysNextLine"

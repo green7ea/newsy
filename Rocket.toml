@@ -1,0 +1,2 @@
+[global.databases]
+manu = { url = "postgres:///manu" }

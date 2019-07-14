@@ -1,0 +1,85 @@
+body {
+    max-width: 50em;
+    margin: auto auto;
+    padding: 0 10px;
+    font: 18px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    color: #eceff4;
+    background: #4c566a;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:link {
+    color: #81a1c1;
+}
+
+a:visited {
+    color: #4c566a;
+}
+
+input:checked + entry {
+    display: none;
+}
+
+[hidden] {
+    display: none;
+}
+
+h1, h2, h3 {
+    margin-left: auto;
+    margin-right: auto;
+    color: #d08770;
+    line-height: 1.2;
+}
+
+section, feed, list {
+    display: flex;
+    align-self: stretch;
+    flex: 1 1 auto;
+    flex-direction: column;
+}
+
+feed {
+    margin-top: 5em;
+    margin-bottom: 5em;
+    background: #2e3440;
+}
+
+entry {
+    display: flex;
+    flex: 8 8 auto;
+    flex-direction: row;
+    justify-content: space-between;
+
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    border-bottom: 1px solid #d9ddde;
+}
+
+options {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    flex: 1 1 auto;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+comments, close {
+    
+}
+
+.close {
+    color: #bf616a;
+    cursor: pointer;
+}
+
+text {
+    line-height: auto;
+    padding: 1em 5em 1em 5em;
+}
